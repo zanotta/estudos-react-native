@@ -1,0 +1,3 @@
+rootProject.name = 'rocketseat1'
+
+include ':app'
