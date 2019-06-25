@@ -1,1 +1,0 @@
-##rocketseat-react-native - Tutorial [Rockseat](https://rocketseat.com.br/starter)
