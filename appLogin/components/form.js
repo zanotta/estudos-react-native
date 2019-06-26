@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextInput, View, StyleSheet, Button, Vibration} from 'react-native';
+import { TextInput, View, StyleSheet, Vibration, TouchableOpacity, Text } from 'react-native';
 
 startVibration = () => {
 	Vibration.vibrate(1000)
@@ -19,32 +19,43 @@ const Form = () => (
 			secureTextEntry={true}
 		/>
 
-		<Button
-			style={styles.button}
+		<TouchableOpacity 
 			onPress={this.startVibration}
-			title="Login"
-			color="#3498db"
-			accessibilityLabel="Login Elo"
-		/>
+			style={styles.button}
+		>
+			<Text style={styles.buttonText}>LOGIN</Text>
+		</TouchableOpacity>
 	</View>
 );
 
 const styles = StyleSheet.create({
 	input: {
-		width: 200,
+		width: 250,
 		height: 40,
-		borderRadius: 5,
-		borderWidth: 2,
+		borderWidth: 1,
 		borderColor: '#bdc3c7',
-		backgroundColor: '#bdc3c7',
-		color: '#FFF',
+		backgroundColor: '#FFF',
+		color: '#666',
 		textAlign: 'center',
 		marginTop: 5,
 		marginBottom: 5
 	},
 	button: {
-		marginTop: 10,
-		borderRadius: 5,
+		marginTop: 20,
+		height: 40,
+		backgroundColor: '#3498db',
+		justifyContent: 'center',
+		alignItems: 'center',
+		borderBottomColor: '#2980b9',
+		borderBottomWidth: 5,
+	},
+	buttonText: {
+		color: '#FFF',
+		fontSize: 16,
+	},
+	logo: {
+		marginTop: 20,
+		marginBottom: 30
 	}
 });
 
